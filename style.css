@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    resize: none;
+    outline: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.select {
+    width: 400px;
+    min-height: 50px;
+    max-height: max-content;
+    border-radius: 10px;
+    border: 1px solid #c2c2c2;
+    margin: 100px auto 0;
+    padding: 10px 20px;
+    user-select: none;
+}
+
+.select__title {
+    font-size: 1.1em;
+    color: #212121;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.select__title-name {
+    display: block;
+    width: 300px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.title-active {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #c2c2c2;
+    margin-bottom: 10px;
+}
+
+.select__values {
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.select__values::-webkit-scrollbar {
+    width: 5px;
+}
+
+.select__values::-webkit-scrollbar-thumb {
+    background-color: #c2c2c2;
+    display: none;
+}
+
+.select__values:hover::-webkit-scrollbar-thumb {
+    display: block;
+}
+
+.select__values-open {
+    height: 300px;
+}
+
+.select__value {
+    width: 90%;
+    min-height: 39px;
+    max-height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #c2c2c2;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: all .3s;
+}
+
+.select__value span {
+    width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.select__value:hover {
+    background-color: #c2c2c2;
+}
+
+.select__value:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+img {
+    transition: all .5s;
+}
+
+.options-open {
+    transform: rotateZ(180deg);
+}
+
+.active-value {
+    background-color: #c2c2c2;
+}
+
+.select-open {
+    max-height: max-content;
+}
